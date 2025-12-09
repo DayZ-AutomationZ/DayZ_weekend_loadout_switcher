@@ -1,6 +1,32 @@
 # DayZ Weekend Loadout Switcher (DZBTools)
 
 This package lets you automatically swap a **DZBTools** loadout JSON on your DayZ server for weekends (e.g. fun / meme / raid weekend spawn gear) and switch back to a normal weekday loadout using a small Python script and cron on your Raspberry Pi (or any Linux box).
+DayZ Weekend Loadout Switcher
+A simple automated system that switches your DZBTools custom loadout between Weekday Loadout and Weekend Loadout using Python + FTP.Designed for Nitrado or any DayZ server with FTP access.
+⭐ Features
+Automatically uploads weekend loadout every Friday at 18:00
+Automatically restores weekday loadout every Sunday at 23:59
+Fully compatible with DZBTools loadout generator
+Zero client-side mods required
+Can run on Raspberry Pi, Linux, Windows, or Android Termux
+📦 Included
+weekday_loadout.json template
+weekend_loadout.json template
+Python FTP uploader script
+Cronjob examples for automated switching
+Step-by-step installation guide
+🛠 Requirements
+DayZ Standalone server
+FTP access (Nitrado supported)
+Python 3.x
+DZBTools loadout file (generated from https://loadouts.dzbtools.com/
+)
+🚀 How It Works
+You generate two loadouts using DZBTools.
+Place them on your device (Pi/Android/PC).
+The Python script uploads the correct file based on schedule.
+The server uses the new loadout on next restart.
+
 
 ---
 
