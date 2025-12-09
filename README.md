@@ -14,6 +14,18 @@ This package lets you automatically swap a **DZBTools** loadout JSON on your Day
 - You use **DZBTools** to generate the JSONs and configure your loadout in `cfgGameplay.json`:
   ```json
   "spawnGearPresetFiles": ["custom/DZB_Loadout_1.json"]
+
+Search for 
+
+  "PlayerData": {
+  "disablePersonalLight": false,
+  "spawnGearPresetFiles": [] <-- empty by default
+}
+
+  "PlayerData": {
+  "disablePersonalLight": false,
+  "spawnGearPresetFiles": ["custom/DZB_Loadout_1.json"] <-- add the loadout
+}
   ```
 
 You then schedule cron like:
@@ -51,7 +63,7 @@ This repo already matches that structure. You can rename the folder if you want,
            └── cfgGameplay.json
    ```
 
-2. In the `PlayerData` section, set:
+2. In the `PlayerData` section, make sure its set:
 
    ```json
    "PlayerData": {
@@ -67,7 +79,7 @@ This repo already matches that structure. You can rename the folder if you want,
    - Save your weekday JSON as `loadout_weekday.json`
    - Save your weekend JSON as `loadout_weekend.json`
 
-This package already includes example JSONs based on your posted configs; overwrite them with your own from DZBTools if you want something different.
+This package already includes example JSON configs; overwrite them with your own from DZBTools if you want something different.
 
 ---
 
@@ -93,7 +105,7 @@ REMOTE_PATH = "/dayzstandalone/mpmissions/dayzOffline.chernarusplus/custom/DZB_L
 On your Pi (or Linux box):
 
 ```bash
-cd /home/d3nd4n/dayz_loadouts
+cd /home/PIusername/dayz_loadouts
 
 # Test weekday upload
 python3 set_loadout.py weekday
@@ -172,10 +184,10 @@ You can edit them directly or overwrite with exports from DZBTools.
 
 ## 9. Quick start TL;DR
 
-1. Put this folder on your Pi: `/home/d3nd4n/dayz_loadouts`
+1. Put this folder on your Pi: `/home/Piusername/dayz_loadouts`
 2. Edit `set_loadout.py` FTP credentials.
 3. Configure `cfgGameplay.json` to use `custom/DZB_Loadout_1.json`.
 4. Test: `python3 set_loadout.py weekend` and restart server → check new spawn.
 5. Add cron entries to auto-switch Friday / Sunday.
 
-Enjoy your **weekend meme loadout** on THE LONG HUNT. 🦌
+Enjoy your **weekend meme loadout** on your server.
