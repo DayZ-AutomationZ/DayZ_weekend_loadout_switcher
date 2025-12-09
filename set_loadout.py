@@ -13,7 +13,7 @@ FTP_PASS = "YOUR_FTP_PASSWORD"
 REMOTE_PATH = "/dayzstandalone/mpmissions/dayzOffline.chernarusplus/custom/DZB_Loadout_1.json"
 
 # Local folder on the Pi where your loadouts live
-LOCAL_DIR = Path("/home/d3nd4n/dayz_loadouts")
+LOCAL_DIR = Path("/home/PIusername/dayz_loadouts")
 
 
 def upload_loadout(mode: str) -> None:
