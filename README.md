@@ -30,7 +30,7 @@ You then schedule cron like:
 Recommended path:
 
 ```bash
-/home/d3nd4n/dayz_loadouts/
+/home/PIusername/dayz_loadouts/
 ├── loadout_weekday.json
 ├── loadout_weekend.json
 └── set_loadout.py
@@ -126,10 +126,10 @@ Add something like:
 
 ```cron
 # --- WEEKEND LOADOUT ON (FRIDAY 18:00) ---
-0 18 * * 5 python3 /home/d3nd4n/dayz_loadouts/set_loadout.py weekend
+0 18 * * 5 python3 /home/PIusername/dayz_loadouts/set_loadout.py weekend
 
 # --- WEEKEND LOADOUT OFF (SUNDAY 23:59 -> back to weekday) ---
-59 23 * * 0 python3 /home/d3nd4n/dayz_loadouts/set_loadout.py weekday
+59 23 * * 0 python3 /home/PIusername/dayz_loadouts/set_loadout.py weekday
 ```
 
 Explanation:
@@ -138,6 +138,11 @@ Explanation:
 - `* * 0` = Sunday (day-of-week 0)
 - Adjust times to match your **raid schedule** and **server restarts**.  
   You want the upload to happen **before** the restart that activates the new loadout.
+  Make sure your PI has the exact same timezone settings as your server or you need to adjust it.
+  the server this is made for restarts 18:00 so at 18:00 a new file is uploaded which is loaded on restart at 18:06 on friday.
+  On sunday the server restarts at 0:06 so file is also uploaded before restart.
+  Make sure it is set correct at least a couple of minutes before restart.
+  
 
 If your server restarts at 00:06, you could e.g.:
 
