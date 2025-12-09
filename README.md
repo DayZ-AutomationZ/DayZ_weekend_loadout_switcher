@@ -14,18 +14,17 @@ This package lets you automatically swap a **DZBTools** loadout JSON on your Day
 - You use **DZBTools** to generate the JSONs and configure your loadout in `cfgGameplay.json`:
   ```json
   "spawnGearPresetFiles": ["custom/DZB_Loadout_1.json"]
-
-Search for 
+  Search for 
 
   "PlayerData": {
   "disablePersonalLight": false,
   "spawnGearPresetFiles": [] <-- empty by default
-}
+
 
   "PlayerData": {
   "disablePersonalLight": false,
   "spawnGearPresetFiles": ["custom/DZB_Loadout_1.json"] <-- add the loadout
-}
+
   ```
 
 You then schedule cron like:
