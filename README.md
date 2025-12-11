@@ -22,9 +22,11 @@ Add cron:
 `crontab -e`
 Example:
 `# Weekend loadout ON (Friday 18:00)`
+
 `0 18 * * 5 python3 /home/PIusername/dayz_loadouts/set_loadout.py weekend`
 
 `# Weekend loadout OFF (Sunday 23:59 -> weekday)`
+
 `59 23 * * 0 python3 /home/PIusername/dayz_loadouts/set_loadout.py weekday`
 Restarts the server after each switch so new spawns use the new loadout.
    
