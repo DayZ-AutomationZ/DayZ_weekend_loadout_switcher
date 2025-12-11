@@ -21,6 +21,7 @@ python3 set_loadout.py weekend
 Add cron:
 `crontab -e`
 Example:
+
 `# Weekend loadout ON (Friday 18:00)`
 
 `0 18 * * 5 python3 /home/PIusername/dayz_loadouts/set_loadout.py weekend`
