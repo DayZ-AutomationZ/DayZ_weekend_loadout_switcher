@@ -1,4 +1,34 @@
 # DayZ Weekend Loadout Switcher (DZBTools)
+
+## ⚡ TL;DR – Weekend Loadout Switcher
+
+1. Put this repo on your Pi, e.g.:
+   `/home/PIusername/dayz_loadouts/`
+2. Use DZBTools to generate two loadout JSONs and save them as:
+   - `loadout_weekday.json`
+   - `loadout_weekend.json`
+3. Edit `set_loadout.py` and fill in:
+   - `FTP_HOST`
+   - `FTP_USER`
+   - `FTP_PASS`
+   - `REMOTE_PATH` → path to `DZB_Loadout_1.json` on your server
+4. In your server `cfgGameplay.json`, set:
+   ```json
+   "spawnGearPresetFiles": ["custom/DZB_Loadout_1.json"]
+Test manually on the Pi:
+python3 set_loadout.py weekday
+python3 set_loadout.py weekend
+Add cron:
+`crontab -e`
+Example:
+`# Weekend loadout ON (Friday 18:00)
+0 18 * * 5 python3 /home/PIusername/dayz_loadouts/set_loadout.py weekend`
+
+`# Weekend loadout OFF (Sunday 23:59 -> weekday)
+59 23 * * 0 python3 /home/PIusername/dayz_loadouts/set_loadout.py weekday`
+Restarts the server after each switch so new spawns use the new loadout.
+   
+
 ---
 This package lets you automatically swap a **DZBTools** loadout JSON on your DayZ server for weekends (e.g. fun / meme / raid weekend spawn gear) and switch back to a normal weekday loadout using a small Python script and cron on your Raspberry Pi (or any Linux box).
 ---
