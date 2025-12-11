@@ -112,7 +112,7 @@ This package already includes example JSON configs; overwrite them with your own
 
 ---
 
-## 4. Configure FTP credentials in `set_loadout.py`
+## 4. Configure FTP credentials in `set_loadout.py`⚠️ Don’t share screenshots of this file, it contains your FTP password.
 
 Open `set_loadout.py` and set:
 
