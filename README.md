@@ -1,5 +1,5 @@
 # DayZ Weekend Loadout Switcher (DZBTools)
-
+[![Day-Z-Automation-Z-(1).png](https://i.postimg.cc/cC0H7Jh0/Day-Z-Automation-Z-(1).png)](https://postimg.cc/PpVTTT0R)
 ## ⚡ TL;DR – Weekend Loadout Switcher
 
 1. Put this repo on your Pi, e.g.:
